@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Game</title>
+        <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+    <header>Number Game</header>&nbsp;
+    <div class="gameOpt">
+        
+            <button class="dropbtn" id="1">Guess Number</button>
+            <div class="gn">
+               
+                <h1>Guess The Number</h1>
+                <p>Guess a number from 1-10</p>
+                    <div> Enter a guess: 
+                    <input type="text" id="guessField" class="guessField">
+                    <input type="submit" value="Submit guess" class="guessSubmit" id="submitguess">
+                    </div>
+            </div>        
+                    <script >
+                        let y = Math.floor(Math.random() * 10 + 1);
+                        let guess = 1;
+                 
+                        document.getElementById("submitguess").onclick = function () {
+                  
+                            let x = document.getElementById("guessField").value;
+                 
+                            if (x == y) {
+                                alert("CONGRATULATIONS!!! YOU GUESSED IT RIGHT IN "
+                                    + guess + " GUESS ");
+                            }
+                 
+                            else if (x > y) {
+                                guess++;
+                                alert("OOPS SORRY!! TRY A SMALLER NUMBER");
+                            }
+                            else {
+                                guess++;
+                                alert("OOPS SORRY!! TRY A GREATER NUMBER")
+                            }
+                        }
+                    </script>  
+                     
+       
+        
+        <div class="am">
+            <button class="dropbtn">Amstrong</button>
+        </div>
+        
+        <div class="pl">
+            <button class="dropbtn">Pallindrome</button>
+        </div>
+        
+        <div class="pr">
+            <button class="dropbtn">Prime</button>
+        </div>
+    </div>
+</body>
+</html>
